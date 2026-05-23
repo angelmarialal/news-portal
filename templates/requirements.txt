@@ -1,0 +1,6 @@
+Flask
+flask-mysqldb
+bcrypt
+Werkzeug
+mysqlclient
+gunicorn
