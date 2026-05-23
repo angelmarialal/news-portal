@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+<div class="col-md-8">
+
+<div class="card shadow p-4">
+
+<h2>Add Post</h2>
+
+<form method="POST"
+enctype="multipart/form-data">
+
+<input type="text"
+name="title"
+class="form-control mb-3"
+placeholder="Title">
+
+<textarea name="content"
+class="form-control mb-3"
+rows="5"
+placeholder="Content">
+</textarea>
+
+<input type="file"
+name="image"
+class="form-control mb-3">
+
+<button class="btn btn-dark">
+Publish
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

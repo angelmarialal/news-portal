@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">Latest News</h1>
+
+<div class="row">
+
+{% for post in posts %}
+
+<div class="col-md-6">
+
+<div class="card shadow mb-4">
+
+<img src="{{ url_for('static',
+filename='uploads/' + post.image) }}"
+class="card-img-top">
+
+<div class="card-body">
+
+<h3>{{ post.title }}</h3>
+
+<p>{{ post.content }}</p>
+
+<p class="text-muted">
+Author: {{ post.author }}
+</p>
+
+<a href="/edit_post/{{ post.id }}"
+class="btn btn-warning">
+Edit
+</a>
+
+<a href="/delete_post/{{ post.id }}"
+class="btn btn-danger">
+Delete
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
