@@ -48,4 +48,4 @@ news-portal/
 ## Clone Repository
 
 ```bash
-git clone 
+git clone https://github.com/angelmarialal/news-portal.git
