@@ -83,7 +83,7 @@ nohup python3 app.py &
 
 ## Live Website
 
-http://3.111.217.73:5000
+http://13.232.47.249:5000/
 
 
 ## GitHub Repository
