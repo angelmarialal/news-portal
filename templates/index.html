@@ -3,7 +3,13 @@
 {% block content %}
 
 <h1 class="mb-4">Latest News</h1>
-
+{% if session.get('role') == 'admin' %}
+<div class="mb-3">
+    <a href="/admin" class="btn btn-danger">
+        Admin Dashboard
+    </a>
+</div>
+{% endif %}
 <div class="row">
 
 {% for post in posts %}
@@ -23,27 +29,16 @@ class="card-img-top">
 <p>{{ post.content }}</p>
 
 <p class="text-muted">
-Author: {{ post.author }}
+Author: {{post.author }}
 </p>
-
-<a href="/edit_post/{{ post.id }}"
-class="btn btn-warning">
-Edit
-</a>
-
-<a href="/delete_post/{{ post.id }}"
-class="btn btn-danger">
-Delete
-</a>
-
+{% if session.get('role') == 'admin' %}
+<a href="/edit_post/{{ post.id }}" class="btn btn-warning">Edit</a>
+<a href="/delete_post/{{ post.id }}" class="btn btn-danger">Delete</a>
+{% endif %}
 </div>
-
 </div>
-
 </div>
 
 {% endfor %}
-
 </div>
-
 {% endblock %}

@@ -1,0 +1,1206 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.46.84:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 939-563-194
+103.215.52.206 - - [25/May/2026 10:02:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+103.215.52.206 - - [25/May/2026 10:02:30] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:02:30] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:02:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+103.215.52.206 - - [25/May/2026 10:02:34] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:02:34] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:02:34] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:03:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+103.215.52.206 - - [25/May/2026 10:03:05] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:03:06] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+103.215.52.206 - - [25/May/2026 10:09:56] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 10:09:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:09:56] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:09:56] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:09:56] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:09:56] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:09:56] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:10:37] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 10:10:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:10:37] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:10:37] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:10:37] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:10:37] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:10:37] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:11:07] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 10:11:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:11:07] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:11:07] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:11:07] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:11:07] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:11:07] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.184.239.243 - - [25/May/2026 10:12:24] "GET / HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:12:24] "GET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:12:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.184.239.243 - - [25/May/2026 10:12:24] "GET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:12:24] "GET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:12:24] "GET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:12:25] "GET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:13:45] "GET /login HTTP/1.1" 200 -
+103.184.239.243 - - [25/May/2026 10:13:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:35:01] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 10:35:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:35:01] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:35:01] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:35:01] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:35:01] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:35:01] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:43:57] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 10:43:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:43:57] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:43:57] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:43:57] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:43:57] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 10:43:57] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:17:26] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 11:17:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:17:26] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:17:26] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:17:26] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:17:26] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:17:26] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 11:50:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+103.215.52.206 - - [25/May/2026 12:03:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+103.215.52.206 - - [25/May/2026 12:15:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+103.215.52.206 - - [25/May/2026 14:52:54] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 14:52:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+3.140.210.92 - - [25/May/2026 15:46:42] "GET / HTTP/1.1" 200 -
+3.140.210.92 - - [25/May/2026 15:48:12] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 15:48:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+3.140.210.92 - - [25/May/2026 15:49:33] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x88u9\x0fþ®À\x87TÚàgæß.Q\x88\x0f\x90\x8d\x06KbÅÿ°Z¬éÅ\x88Í\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+3.140.210.92 - - [25/May/2026 15:49:33] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x88u9\x0fþ®À\x87TÚàgæß.Q\x88\x0f\x90\x8d\x06KbÅÿ°Z¬éÅ\x88Í\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.140.210.92 - - [25/May/2026 15:51:20] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8d¶\x9eñ\x01x¡$u')
+3.140.210.92 - - [25/May/2026 15:51:20] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8d¶\x9eñ\x01x¡$u[0m" 400 -
+103.215.52.206 - - [25/May/2026 16:13:10] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:13:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:11] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:11] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:11] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:11] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:12] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+103.215.52.206 - - [25/May/2026 16:13:13] "GET /register HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:13:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:13:41] "[32mPOST /register HTTP/1.1[0m" 302 -
+103.215.52.206 - - [25/May/2026 16:13:41] "GET /login HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:13:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:48] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:17:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:48] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:48] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:48] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:48] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:48] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:17:58] "GET /edit_post/5 HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:17:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[32mPOST /edit_post/5 HTTP/1.1[0m" 302 -
+103.215.52.206 - - [25/May/2026 16:18:02] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:18:02] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:52:00] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [25/May/2026 16:52:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:52:01] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:52:01] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:52:01] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:52:01] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [25/May/2026 16:52:01] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+198.235.24.220 - - [26/May/2026 01:31:34] "GET / HTTP/1.0" 200 -
+205.210.31.3 - - [26/May/2026 01:57:58] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:16:10] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+103.215.52.206 - - [26/May/2026 02:16:21] "[32mGET /delete_post/6 HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:16:21] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:16:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:21] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:21] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:21] "[36mGET /static/uploads/Screenshot_2026-05-24_124123.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:16:21] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:17:17] "[32mGET /delete_post/3 HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:17:17] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:17:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:17:17] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:17:17] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:17:17] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:19:13] "GET /register HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:19:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:19:59] "[32mPOST /register HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:19:59] "GET /login HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:20:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:20:14] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 82, in login
+    if bcrypt.checkpw(
+    
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+103.215.52.206 - - [26/May/2026 02:20:14] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:20:14] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:20:14] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:20:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:20:23] "GET /dashboard HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:20:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:20:30] "GET /add_post HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:20:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:23:23] "[32mPOST /add_post HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:23:23] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:23:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:23:23] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:23:23] "GET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:23:23] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:23:23] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:24:24] "GET /add_post HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:26] "[32mPOST /add_post HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:25:26] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:26] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:26] "GET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:26] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:26] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:29] "[32mGET /delete_post/7 HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:25:29] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:29] "[36mGET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:29] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:29] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:29] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:35] "GET /register HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:47] "[32mPOST /register HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:25:48] "GET /login HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:25:57] "GET /dashboard HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:25:59] "GET /add_post HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:25:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:28:58] "[32mPOST /add_post HTTP/1.1[0m" 302 -
+103.215.52.206 - - [26/May/2026 02:28:58] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:28:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:28:58] "[36mGET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:28:58] "GET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 02:28:58] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:28:58] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:28:58] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 02:29:21] "GET /add_post HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 05:02:33] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 05:02:33] "GET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 05:02:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 05:02:33] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 05:02:33] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 05:02:33] "GET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 05:02:33] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 05:02:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+47.251.91.12 - - [26/May/2026 05:42:12] code 400, message Bad request version ('RTSP/1.0')
+47.251.91.12 - - [26/May/2026 05:42:12] "[31m[1mOPTIONS / RTSP/1.0[0m" 400 -
+47.251.91.12 - - [26/May/2026 05:42:36] code 400, message Bad request version ('À\x13À')
+47.251.91.12 - - [26/May/2026 05:42:36] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03I\x06²ù¼\x99iÀYûøºe-\x83Ud]\x0e\x8d·b8´gÆÝ9dZ8f gÁ\x81i³öòË°©\x19NÖ½\x95g|püé<Z¡\x90T·é¥8'O;\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+47.251.91.12 - - [26/May/2026 05:42:46] "GET / HTTP/1.1" 200 -
+47.251.91.12 - - [26/May/2026 05:42:47] "GET / HTTP/1.1" 200 -
+47.251.89.134 - - [26/May/2026 05:43:23] "GET / HTTP/1.1" 200 -
+47.88.18.245 - - [26/May/2026 05:43:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+103.215.52.206 - - [26/May/2026 06:05:48] "GET / HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 06:05:48] "GET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 06:05:48] "GET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1" 200 -
+103.215.52.206 - - [26/May/2026 06:05:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 06:05:48] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 06:05:48] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 06:05:48] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 06:05:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+45.115.89.238 - - [26/May/2026 06:36:38] "GET / HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:39] "GET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:39] "GET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:39] "GET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:39] "GET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:39] "GET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+45.115.89.238 - - [26/May/2026 06:36:41] "GET / HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:41] "[36mGET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:41] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:41] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:42] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:42] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:48] "GET /search?keyword= HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:48] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:49] "GET / HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:49] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:50] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:50] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:51] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:51] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:51] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:51] "GET /login HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:53] "[36mGET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:53] "[36mGET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:53] "GET /register HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:53] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:57] "GET / HTTP/1.1" 200 -
+45.115.89.238 - - [26/May/2026 06:36:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:57] "[36mGET /static/uploads/IMG_20260525_072814.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:57] "[36mGET /static/uploads/IMG_20260526_075151.jpg HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:57] "[36mGET /static/uploads/Screenshot_2026-05-23_202354.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:57] "[36mGET /static/uploads/Screenshot_2026-05-24_223524.png HTTP/1.1[0m" 304 -
+45.115.89.238 - - [26/May/2026 06:36:58] "[36mGET /static/uploads/Screenshot_2026-05-24_123707.png HTTP/1.1[0m" 304 -
+103.215.52.206 - - [26/May/2026 06:54:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+134.122.96.62 - - [26/May/2026 12:36:45] "GET / HTTP/1.1" 200 -
+205.210.31.220 - - [26/May/2026 13:00:43] "GET / HTTP/1.1" 200 -
+66.132.224.232 - - [26/May/2026 13:48:48] code 400, message Bad request version ('4§Ü1BØ*')
+66.132.224.232 - - [26/May/2026 13:48:48] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x86\x0dû\x979£\x8a¹>QÆ\x93*¼{%ì\x18\x0b\x8ai\x8aö\x9c6¬öÆOpw5 \x16ÆEÄW³¼«¯¤Ë\x854§Ü1BØ*[0m" 400 -
+66.132.224.232 - - [26/May/2026 13:49:00] "[31m[1mGET / HTTP/1.1[0m" 400 -
+66.132.224.232 - - [26/May/2026 13:49:09] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ú\x19\x08\x9e7\x1b®r|¤Ì·Ï^(\x9a]§\x8d\x00ÄOÓi')
+66.132.224.232 - - [26/May/2026 13:49:10] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ú\x19\x08\x9e7\x1b®r|¤Ì·Ï^(\x9a]§\x8d\x00ÄOÓi[0m" 400 -
+66.132.224.232 - - [26/May/2026 13:49:11] "GET / HTTP/1.1" 200 -
+66.132.224.232 - - [26/May/2026 13:49:37] "GET / HTTP/1.1" 200 -
+3.15.212.8 - - [26/May/2026 14:15:04] "GET / HTTP/1.1" 200 -
+3.15.212.8 - - [26/May/2026 14:16:16] "GET / HTTP/1.1" 200 -
+3.15.212.8 - - [26/May/2026 14:17:25] code 400, message Bad request version ('À\x14À')
+3.15.212.8 - - [26/May/2026 14:17:25] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x13\x85p2å[½ÀC¿sÃ°"å\x1c×94?Hû\x1b\x96r\x98)\x0c\x9e¬m\x81\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.15.212.8 - - [26/May/2026 14:19:38] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x11vJ³½¤áR\x9eCQç,PB\x9bHÑv1\x14B6pJ;±Ä\x14GrÓ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+3.15.212.8 - - [26/May/2026 14:19:38] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x11vJ³½¤áR\x9eCQç,PB\x9bHÑv1\x14B6pJ;±Ä\x14GrÓ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+198.235.24.116 - - [26/May/2026 21:07:55] "[35m[1mGET / HTTP/1.0[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+205.210.31.23 - - [27/May/2026 03:04:43] "[35m[1mGET / HTTP/1.0[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+198.235.24.8 - - [27/May/2026 03:49:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+44.220.188.108 - - [27/May/2026 04:32:23] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x84e+Þ\x16ÌÅÙ¼')
+44.220.188.108 - - [27/May/2026 04:32:23] "[31m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x84e+Þ\x16ÌÅÙ¼[0m" 400 -
+44.220.188.108 - - [27/May/2026 04:32:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+44.220.188.108 - - [27/May/2026 04:32:24] "[35m[1mGET /?__debugger__=yes&amp;cmd=resource&amp;f=console.png HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+152.58.201.221 - - [27/May/2026 11:47:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+152.58.201.221 - - [27/May/2026 11:47:39] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+152.58.201.221 - - [27/May/2026 11:47:39] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+152.58.201.221 - - [27/May/2026 11:47:39] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+3.15.26.4 - - [27/May/2026 13:23:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+3.15.26.4 - - [27/May/2026 13:26:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+3.15.26.4 - - [27/May/2026 13:27:30] code 400, message Bad request version ('À\x14À')
+3.15.26.4 - - [27/May/2026 13:27:30] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Tné\x9e«º\x84Fa\x1c\x89\\-;Þ²T1nû47çº¬ð\x87u2\x0eº¬\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.15.26.4 - - [27/May/2026 13:28:42] code 400, message Bad request version ('À\x14À')
+3.15.26.4 - - [27/May/2026 13:28:42] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ñî4Ú5aÓ ÿ\x0f\x94â\x1bl¢Ä\x08së\x09\x87¬p\x93û\x9cE=Á\x1e\x1b|\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+66.132.186.165 - - [27/May/2026 14:31:04] code 400, message Bad request version ('À\x14À')
+66.132.186.165 - - [27/May/2026 14:31:04] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03G\x09î\x10§g\x1f2Fò}ëfÎ;\x85v§L7î<\x89ø&+\x00\x1b~\x0fæ\x9d ½\x8aÕñ\x08OªzÍÿUC\x04)Ð#«_µR\x04\x14\x8e¾OÄ2\x18V\x10Y \x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+66.132.186.165 - - [27/May/2026 14:31:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+66.132.186.165 - - [27/May/2026 14:31:16] code 400, message Bad request version ('À\x14À')
+66.132.186.165 - - [27/May/2026 14:31:16] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x8bÁu·®[§AeD\x85\x84Z/OÃ\x18~ö¦6@Íl\x8a:ï\x8a\x02v9Ë \x84\x8bx\x11æ\x14\x94ðe­ÉjË1Æâ¾\x95uF]¨ÑßÛ\x894íûÍ\x94÷\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+66.132.186.165 - - [27/May/2026 14:31:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+66.132.186.165 - - [27/May/2026 14:31:23] code 505, message Invalid HTTP version (2.0)
+66.132.186.165 - - [27/May/2026 14:31:23] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+66.132.186.165 - - [27/May/2026 14:31:48] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x10\\\x9f§¥¤¬IªÒ\x87Å\x88Öù*^ç\\Úc÷Z\x8d¹T\x0f\x18¡Hj¹')
+66.132.186.165 - - [27/May/2026 14:31:48] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x10\\\x9f§¥¤¬IªÒ\x87Å\x88Öù*^ç\\Úc÷Z\x8d¹T\x0f\x18¡Hj¹ «×¸P\x16[0m" 400 -
+66.132.186.165 - - [27/May/2026 14:31:53] "[33mGET /security.txt HTTP/1.1[0m" 404 -
+152.58.201.133 - - [27/May/2026 15:00:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+152.58.201.133 - - [27/May/2026 15:00:12] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+152.58.201.133 - - [27/May/2026 15:00:13] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+152.58.201.133 - - [27/May/2026 15:00:13] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+157.51.218.166 - - [28/May/2026 06:36:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+157.51.218.166 - - [28/May/2026 06:36:08] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+157.51.218.166 - - [28/May/2026 06:36:08] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+20.102.108.84 - - [28/May/2026 11:18:47] "[33mGET /v2/ HTTP/1.1[0m" 404 -
+164.90.202.205 - - [28/May/2026 14:19:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+18.118.145.93 - - [28/May/2026 14:45:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+18.118.145.93 - - [28/May/2026 14:46:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+18.118.145.93 - - [28/May/2026 14:47:39] code 400, message Bad request version ('À\x14À')
+18.118.145.93 - - [28/May/2026 14:47:39] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03³\x85Ðö1OÔ¦¡d+¯µO\x1bÉWÖ½@\x82[Ó\x0cÀ!c7[Ñ\x01\x05\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+18.118.145.93 - - [28/May/2026 14:48:30] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8dÀó&ðëÝmP.q5/Ô\x13û\x16ÓÕny\x83\x92{\x9fK{\x8e')
+18.118.145.93 - - [28/May/2026 14:48:30] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8dÀó&ðëÝmP.q5/Ô\x13û\x16ÓÕny\x83\x92{\x9fK{\x8e[0m" 400 -
+198.235.24.206 - - [28/May/2026 19:54:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+212.73.148.24 - - [29/May/2026 05:45:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+66.132.172.177 - - [29/May/2026 09:15:09] code 400, message Bad request version ('ñ\x7f\x15J\x7f<\x7fø?\x17')
+66.132.172.177 - - [29/May/2026 09:15:09] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ûl\x1b÷ô+wÕ\x08±\x8f\x13t\x00\x0e±è\x81>\x91î\x9f^®+ÇD\x87¥/ëê Ý# ä¡;/óCcÙ\x08O\x18\x9bÒ"ò\x86\x82\x1cñ\x7f\x15J\x7f<\x7fø?\x17[0m" 400 -
+66.132.172.177 - - [29/May/2026 09:15:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+66.132.172.177 - - [29/May/2026 09:15:11] code 505, message Invalid HTTP version (2.0)
+66.132.172.177 - - [29/May/2026 09:15:11] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+66.132.172.177 - - [29/May/2026 09:15:15] code 400, message Bad request version ('À\x14À')
+66.132.172.177 - - [29/May/2026 09:15:15] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x9f\x05\x8f\x85ç\x806êÔ/iâ"Ã%\x150À\x04\x91Ù\x8ayOô\x07\x8c¢ø~%\x05 ¥\x1fW>°¥:Ã\x7f\x11MoDv\x06yÈ²5Ê <0\x0fZw`Æ\x01\x09ú¶\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+66.132.172.177 - - [29/May/2026 09:15:15] "[33mGET /wiki HTTP/1.1[0m" 404 -
+18.218.54.5 - - [29/May/2026 12:22:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+18.218.54.5 - - [29/May/2026 12:24:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+18.218.54.5 - - [29/May/2026 12:26:04] code 400, message Bad request version ('À\x14À')
+18.218.54.5 - - [29/May/2026 12:26:04] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ðtVÞãH]]ìþ=DýK/<\x16\x06Ë\x0d\x02hê|\x03\x82Ê\x1bým\x80\x1d\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+18.218.54.5 - - [29/May/2026 12:28:02] code 400, message Bad request version ('À\x14À')
+18.218.54.5 - - [29/May/2026 12:28:02] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Q&ùÆ\x0b®Añú¢\x88¡\x9ag:\x9bßöa\x7fÚ\x80­\x13Ý?\x04²a\x89\x7f\x8f\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+150.107.212.137 - - [29/May/2026 14:20:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+150.107.212.137 - - [29/May/2026 15:15:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+150.107.212.137 - - [29/May/2026 15:15:11] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+150.107.212.137 - - [29/May/2026 15:15:11] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+150.107.212.137 - - [29/May/2026 15:15:11] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+150.107.212.137 - - [29/May/2026 15:15:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+150.107.212.137 - - [29/May/2026 15:15:24] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+150.107.212.137 - - [29/May/2026 15:15:24] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+150.107.212.137 - - [29/May/2026 15:15:24] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+150.107.212.137 - - [29/May/2026 15:20:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ubuntu/news-portal/app.py", line 27, in home
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.14/site-packages/MySQLdb/connections.py", line 206, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:3306' (111)")
+150.107.212.137 - - [29/May/2026 15:20:49] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+150.107.212.137 - - [29/May/2026 15:20:49] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+150.107.212.137 - - [29/May/2026 15:20:49] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/news-portal/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 939-563-194
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-x646hb3_'}
+  warnings.warn(
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.46.84:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 754-675-822

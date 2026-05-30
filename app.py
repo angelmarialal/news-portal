@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session,flash,url_for
 from flask_mysqldb import MySQL
 from werkzeug.utils import secure_filename
 import MySQLdb.cursors
@@ -13,9 +13,9 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # MYSQL CONFIG
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Root123abc'
+app.config['MYSQL_HOST'] = '127.0.0.1'
+app.config['MYSQL_USER'] = 'newsuser'
+app.config['MYSQL_PASSWORD'] = 'password123'
 app.config['MYSQL_DB'] = 'news_portal'
 
 mysql = MySQL(app)
@@ -31,7 +31,26 @@ def home():
     posts = cursor.fetchall()
 
     return render_template('index.html', posts=posts)
+@app.route('/admin')
+def admin():
 
+    if 'role' not in session or session['role'] != 'admin':
+        flash('Access denied')
+        return redirect(url_for('home'))
+
+    cursor = mysql.connection.cursor()
+
+    cursor.execute("SELECT COUNT(*) FROM users")
+    total_users = cursor.fetchone()[0]
+
+    cursor.execute("SELECT COUNT(*) FROM posts")
+    total_posts = cursor.fetchone()[0]
+
+    return render_template(
+        'admin.html',
+        total_users=total_users,
+        total_posts=total_posts
+    )
 # REGISTER
 @app.route('/register', methods=['GET', 'POST'])
 def register():
